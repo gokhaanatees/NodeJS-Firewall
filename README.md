@@ -1,33 +1,4 @@
-HTTP İstek Engelleme ve CAPTCHA <br>
-Bu Node.js projesi, belirli bir IP adresinden gelen istek sayısının belirli bir sınırı aştığı durumlarda o IP adresini engelleyen ve kullanıcının CAPTCHA testini geçmesi gerektiren bir web sunucusu uygulamasıdır.
-
-Proje, http, ipfilter, IpDeniedError, ve svg-captcha modüllerini kullanır.
-
-Başlarken
-Projeyi yerel bilgisayarınıza klonlamak için aşağıdaki komutu kullanabilirsiniz:
-
-```bash
-git clone https://github.com/gokhaanatees/NodeJS-Firewall.git
-```
-Projenin bağımlılıklarını yüklemek için aşağıdaki komutu kullanabilirsiniz:
-
-```bash
-npm install
-```
-
-Kullanım
-Uygulamayı başlatmak için aşağıdaki komutu kullanabilirsiniz:
-
-```bash
-node app.js
-```
-
-Uygulama varsayılan olarak 3000 numaralı portu dinler.
-
-Yapılandırma
-Uygulamanın yapısı ve işleyişi app.js dosyasında yer almaktadır. Bu dosyada aşağıdaki değişkenleri düzenleyebilirsiniz:
-
-maxRequestsPerMinute: Bir dakika içinde izin verilen en fazla istek sayısı. Varsayılan değer: 1000.
-maxRequestsPerMinutePerIp: Bir dakika içinde aynı IP adresinden izin verilen en fazla istek sayısı. Varsayılan değer: 20.
-bannedIps: Engellenen IP adresleri listesi. Varsayılan değer: [].
-captchaThreshold: CAPTCHA testinin başlatılacağı istek sayısı. Varsayılan değer: 50.
+<h1>HTTP İstek Engelleme ve CAPTCHA</h1><p>Bu Node.js projesi, belirli bir IP adresinden gelen istek sayısının belirli bir sınırı aştığı durumlarda o IP adresini engelleyen ve kullanıcının CAPTCHA testini geçmesi gerektiren bir web sunucusu uygulamasıdır.</p><p>Proje, <code>http</code>, <code>ipfilter</code>, <code>IpDeniedError</code>, ve <code>svg-captcha</code> modüllerini kullanır.</p><h2>Başlarken</h2><p>Projeyi yerel bilgisayarınıza klonlamak için aşağıdaki komutu kullanabilirsiniz:</p><pre class=""><div class="bg-black rounded-md mb-4"><div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans justify-between rounded-t-md"><button class="flex ml-auto gap-2"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg></button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-sh">git <span class="hljs-built_in">clone</span> https://github.com/gokhaanatees/NodeJS-Firewall.git
+</code></div></div></pre><p>Projenin bağımlılıklarını yüklemek için aşağıdaki komutu kullanabilirsiniz:</p><pre class=""><div class="bg-black rounded-md mb-4"><div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans justify-between rounded-t-md"><button class="flex ml-auto gap-2"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-sh">npm install
+</code></div></div></pre><h2>Kullanım</h2><p>Uygulamayı başlatmak için aşağıdaki komutu kullanabilirsiniz:</p><pre class=""><div class="bg-black rounded-md mb-4"><div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans justify-between rounded-t-md"><button class="flex ml-auto gap-2"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg></button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-sh">node app.js
+</code></div></div></pre><p>Uygulama varsayılan olarak <code>3000</code> numaralı portu dinler.</p><h2>Yapılandırma</h2><p>Uygulamanın yapısı ve işleyişi <code>app.js</code> dosyasında yer almaktadır. Bu dosyada aşağıdaki değişkenleri düzenleyebilirsiniz:</p><ul><li><code>maxRequestsPerMinute</code>: Bir dakika içinde izin verilen en fazla istek sayısı. Varsayılan değer: <code>1000</code>.</li><li><code>maxRequestsPerMinutePerIp</code>: Bir dakika içinde aynı IP adresinden izin verilen en fazla istek sayısı. Varsayılan değer: <code>20</code>.</li><li><code>bannedIps</code>: Engellenen IP adresleri listesi. Varsayılan değer: <code>[]</code>.</li><li><code>captchaThreshold</code>: CAPTCHA testinin başlatılacağı istek sayısı. Varsayılan değer: <code>50</code>.</li></ul><h2>Lisans</h2><p>Bu proje MIT lisansı ile lisanslanmıştır. Daha fazla bilgi için <code>LICENSE</code> dosyasına bakabilirsiniz.</p><p><img src="https://static.javatpoint.com/tutorial/firewall/images/what-is-firewall-2.png" alt="Ekran Görüntüsü">
