@@ -1,4 +1,4 @@
-HTTP İstek Engelleme ve CAPTCHA
+HTTP İstek Engelleme ve CAPTCHA <br>
 Bu Node.js projesi, belirli bir IP adresinden gelen istek sayısının belirli bir sınırı aştığı durumlarda o IP adresini engelleyen ve kullanıcının CAPTCHA testini geçmesi gerektiren bir web sunucusu uygulamasıdır.
 
 Proje, http, ipfilter, IpDeniedError, ve svg-captcha modüllerini kullanır.
