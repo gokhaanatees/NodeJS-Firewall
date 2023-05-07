@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "http": "^0.0.1-security",
+    "ipfilter": "^0.0.4",
+    "svg-captcha": "^1.4.0"
+  }
+}
